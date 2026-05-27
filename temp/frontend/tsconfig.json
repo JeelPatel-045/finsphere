@@ -1,0 +1,8 @@
+# 1. AI Services (port 9000)
+cd ai-services && python main.py
+
+# 2. Backend (port 8000)
+cd backend && uvicorn app.main:app --reload --port 8000
+
+# 3. Frontend (port 3000)
+cd frontend && npm run dev

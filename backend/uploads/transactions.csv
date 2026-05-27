@@ -1,0 +1,6 @@
+txn_id,date,type,amount,vendor,payment_method,status
+TRX1001,2026-01-10,Expense,12000,ABC Ltd,Bank Transfer,Approved
+TRX1002,2026-01-12,Expense,95000,XYZ Corp,Wire Transfer,Pending
+TRX1003,2026-01-15,Revenue,240000,Client A,Online,Completed
+TRX1004,2026-01-17,Expense,45000,CloudHost,Credit Card,Approved
+TRX1005,2026-01-20,Expense,99999,Unknown Vendor,Cash,Flagged

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 40,
+    "filename": "transactions.csv",
+    "content_type": "text/csv",
+    "size_bytes": 366,
+    "status": "processed",
+    "document_type": "transaction_data"
+  },
+  {
+    "id": 39,
+    "filename": "customers-100.csv",
+    "content_type": "text/csv",
+    "size_bytes": 17261,
+    "status": "processed",
+    "document_type": "transaction_data"
+  },
+  {
+    "id": 38,
+    "filename": "Apr-WIFI_Bill.pdf",
+    "content_type": "application/pdf",
+    "size_bytes": 592431,
+    "status": "processed",
+    "document_type": "invoice"
+  },
+  {
+    "id": 37,
+    "filename": "requirements.txt",
+    "content_type": "text/plain",
+    "size_bytes": 736,
+    "status": "processed",
+    "document_type": "requirements.txt"
+  }
+]

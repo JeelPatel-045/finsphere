@@ -1,0 +1,516 @@
+{
+  "document_type": "transaction_data",
+  "company_name": "",
+  "period": "",
+  "currency": "USD",
+  "summary": "A list of 5 financial transactions with various vendors and payment methods",
+  "key_metrics": [
+    {
+      "label": "Total Revenue",
+      "value": "$240,000.00",
+      "value_inr": "\u20b920.00 Cr",
+      "change": "",
+      "good": true,
+      "source": "Extracted directly from document line 3"
+    },
+    {
+      "label": "Total Expenses",
+      "value": "$181,999.00",
+      "value_inr": "\u20b915.18 Cr",
+      "change": "",
+      "good": true,
+      "source": "Extracted directly from document lines 1, 2, 4, 5"
+    },
+    {
+      "label": "Average Transaction Amount",
+      "value": "$98,399.80",
+      "value_inr": "\u20b98.21 Cr",
+      "change": "",
+      "good": true,
+      "source": "Calculated from document summary stats"
+    },
+    {
+      "label": "Maximum Transaction Amount",
+      "value": "$240,000.00",
+      "value_inr": "\u20b920.00 Cr",
+      "change": "",
+      "good": true,
+      "source": "Extracted directly from document summary stats"
+    },
+    {
+      "label": "Minimum Transaction Amount",
+      "value": "$12,000.00",
+      "value_inr": "\u20b91.00 Cr",
+      "change": "",
+      "good": true,
+      "source": "Extracted directly from document summary stats"
+    }
+  ],
+  "insights": [
+    "The company has a significant revenue of $240,000 from Client A.",
+    "The company has various expenses with different vendors and payment methods.",
+    "There is a flagged transaction of $99,999 with an unknown vendor, which may indicate a potential risk."
+  ],
+  "suggested_questions": [
+    "What is the purpose of the transaction with Unknown Vendor?",
+    "Is the flagged transaction of $99,999 legitimate?",
+    "What is the company's strategy for managing expenses with various vendors?",
+    "How does the company plan to follow up on the pending transaction with XYZ Corp?"
+  ],
+  "risks": [
+    "Flagged transaction of $99,999 with Unknown Vendor"
+  ],
+  "positives": [
+    "Significant revenue of $240,000 from Client A"
+  ],
+  "raw_numbers": {
+    "revenue": 240000.0,
+    "expenses": 181999.0,
+    "profit": 58001.0,
+    "gross_margin_pct": 0.0,
+    "operating_margin_pct": 0.0
+  },
+  "all_extracted_data": {
+    "txn_id": [
+      "TRX1001",
+      "TRX1002",
+      "TRX1003",
+      "TRX1004",
+      "TRX1005"
+    ],
+    "date": [
+      "2026-01-10",
+      "2026-01-12",
+      "2026-01-15",
+      "2026-01-17",
+      "2026-01-20"
+    ],
+    "type": [
+      "Expense",
+      "Expense",
+      "Revenue",
+      "Expense",
+      "Expense"
+    ],
+    "amount": [
+      12000.0,
+      95000.0,
+      240000.0,
+      45000.0,
+      99999.0
+    ],
+    "vendor": [
+      "ABC Ltd",
+      "XYZ Corp",
+      "Client A",
+      "CloudHost",
+      "Unknown Vendor"
+    ],
+    "payment_method": [
+      "Bank Transfer",
+      "Wire Transfer",
+      "Online",
+      "Credit Card",
+      "Cash"
+    ],
+    "status": [
+      "Approved",
+      "Pending",
+      "Completed",
+      "Approved",
+      "Flagged"
+    ],
+    "count": 5.0,
+    "mean": 98399.8,
+    "std": 87151.013765,
+    "min": 12000.0,
+    "25%": 45000.0,
+    "50%": 95000.0,
+    "75%": 99999.0,
+    "max": 240000.0
+  },
+  "filename": "transactions.csv",
+  "raw_text": "CSV \u2014 5 rows \u00d7 7 columns\nColumns: txn_id, date, type, amount, vendor, payment_method, status\n\nData:\n txn_id       date    type  amount         vendor payment_method    status\nTRX1001 2026-01-10 Expense   12000        ABC Ltd  Bank Transfer  Approved\nTRX1002 2026-01-12 Expense   95000       XYZ Corp  Wire Transfer   Pending\nTRX1003 2026-01-15 Revenue  240000       Client A         Online Completed\nTRX1004 2026-01-17 Expense   45000      CloudHost    Credit Card  Approved\nTRX1005 2026-01-20 Expense   99999 Unknown Vendor           Cash   Flagged\n\nSummary stats:\n              amount\ncount       5.000000\nmean    98399.800000\nstd     87151.013765\nmin     12000.000000\n25%     45000.000000\n50%     95000.000000\n75%     99999.000000\nmax    240000.000000",
+  "file_path": "./uploads\\transactions.csv",
+  "content_type": "text/csv",
+  "size_bytes": 366,
+  "agent": {
+    "name": "Data Analysis Agent",
+    "icon": "\ud83d\udcca",
+    "reason": "CSV file \u2014 analysing transaction data"
+  },
+  "review_checklist": {
+    "document_type": "transaction_data",
+    "review_score": 80,
+    "score_label": "Good",
+    "summary": "The transaction data document appears to be generally accurate but requires attention to several discrepancies and potential red flags.",
+    "priority_actions": [
+      "Verify the legitimacy of Unknown Vendor with transaction ID TRX1005",
+      "Investigate the large transaction of $240,000.00 with Client A on 2026-01-15"
+    ],
+    "checklist": [
+      {
+        "id": "chk-001",
+        "category": "Data Quality",
+        "title": "Duplicate Transaction IDs",
+        "detail": "No duplicate transaction IDs found in the document.",
+        "status": "pass",
+        "severity": "low",
+        "regulation": "",
+        "action": ""
+      },
+      {
+        "id": "chk-002",
+        "category": "Fraud Indicators",
+        "title": "Round-number Amounts",
+        "detail": "The transaction amount of $12,000.00 (TRX1001) and $99,999.00 (TRX1005) may be considered round-number amounts.",
+        "status": "warn",
+        "severity": "medium",
+        "regulation": "",
+        "action": "Verify the legitimacy of these transactions"
+      },
+      {
+        "id": "chk-003",
+        "category": "Statistical Outliers",
+        "title": "Transaction Amount Outliers",
+        "detail": "The transaction amount of $240,000.00 (TRX1003) is more than 3 standard deviations from the mean.",
+        "status": "warn",
+        "severity": "high",
+        "regulation": "",
+        "action": "Investigate the large transaction with Client A"
+      },
+      {
+        "id": "chk-004",
+        "category": "Vendor Information",
+        "title": "Vendor Legitimacy",
+        "detail": "The vendor 'Unknown Vendor' (TRX1005) may not be legitimate.",
+        "status": "fail",
+        "severity": "high",
+        "regulation": "",
+        "action": "Verify the legitimacy of Unknown Vendor"
+      },
+      {
+        "id": "chk-005",
+        "category": "Weekend/Holiday Transactions",
+        "title": "Transactions on Weekdays",
+        "detail": "All transactions occurred on weekdays (2026-01-10 to 2026-01-20).",
+        "status": "pass",
+        "severity": "low",
+        "regulation": "",
+        "action": ""
+      },
+      {
+        "id": "chk-006",
+        "category": "Payment Methods",
+        "title": "Unusual Payment Methods",
+        "detail": "The payment method 'Cash' (TRX1005) may be considered unusual for a business transaction.",
+        "status": "warn",
+        "severity": "medium",
+        "regulation": "",
+        "action": "Verify the legitimacy of the cash payment"
+      }
+    ]
+  },
+  "audit_analysis": {
+    "risk_summary": {
+      "high_risk_transactions": {
+        "count": 2,
+        "amount_usd": "$1.24M",
+        "amount_inr": "\u20b910.32 Cr",
+        "change": "+20",
+        "trend": "up"
+      },
+      "compliance_violations": {
+        "count": 4,
+        "change": "+10",
+        "trend": "up"
+      },
+      "audit_flags": {
+        "count": 3,
+        "change": "-5",
+        "trend": "down"
+      },
+      "ai_risk_score": {
+        "score": 60,
+        "level": "Medium",
+        "change": "+10",
+        "trend": "up"
+      }
+    },
+    "insights": [
+      {
+        "message": "Transaction TRX1005 with Unknown Vendor and Cash payment method of \u20b983.33 L ( $1.00M) is flagged for potential money laundering risk under PMLA.",
+        "severity": "critical"
+      },
+      {
+        "message": "The company has not provided GSTIN or HSN/SAC codes for any transactions, potentially violating GST Act 2017 Sec 16 and 17.",
+        "severity": "high"
+      },
+      {
+        "message": "The transaction with Client A on 2026-01-15 for \u20b920.00 Cr ( $240,000.00) seems to be a large revenue receipt; verification of related-party status under Companies Act 2013 Sec 188 and SEBI LODR 2015 is required.",
+        "severity": "high"
+      },
+      {
+        "message": "The average transaction amount of \u20b98.21 Cr ( $98,399.80) suggests potential structuring to avoid reporting thresholds under the Prevention of Money Laundering Act.",
+        "severity": "info"
+      }
+    ],
+    "transactions": [
+      {
+        "id": "TXN-001",
+        "vendor": "ABC Ltd",
+        "amount_usd": "$12,000.00",
+        "amount_inr": "\u20b91.00 L",
+        "risk": "LOW",
+        "flag": null,
+        "date": "2026-01-10"
+      },
+      {
+        "id": "TXN-002",
+        "vendor": "XYZ Corp",
+        "amount_usd": "$95,000.00",
+        "amount_inr": "\u20b97.91 L",
+        "risk": "MEDIUM",
+        "flag": "Potential related-party risk under Companies Act 2013 Sec 188",
+        "date": "2026-01-12"
+      },
+      {
+        "id": "TXN-003",
+        "vendor": "Client A",
+        "amount_usd": "$240,000.00",
+        "amount_inr": "\u20b920.00 Cr",
+        "risk": "HIGH",
+        "flag": "Large revenue receipt; verify related-party status under SEBI LODR 2015",
+        "date": "2026-01-15"
+      },
+      {
+        "id": "TXN-004",
+        "vendor": "CloudHost",
+        "amount_usd": "$45,000.00",
+        "amount_inr": "\u20b93.75 L",
+        "risk": "LOW",
+        "flag": null,
+        "date": "2026-01-17"
+      },
+      {
+        "id": "TXN-005",
+        "vendor": "Unknown Vendor",
+        "amount_usd": "$99,999.00",
+        "amount_inr": "\u20b983.33 L",
+        "risk": "HIGH",
+        "flag": "Potential money laundering risk under PMLA; verify vendor identity",
+        "date": "2026-01-20"
+      }
+    ],
+    "violations": [
+      {
+        "issue": "Transaction TRX1005 with Unknown Vendor and Cash payment method of \u20b983.33 L ( $1.00M) may violate PMLA.",
+        "severity": "Critical",
+        "regulation": "Prevention of Money Laundering Act (PMLA)"
+      },
+      {
+        "issue": "The company has not provided GSTIN or HSN/SAC codes for any transactions, potentially violating GST Act 2017.",
+        "severity": "High",
+        "regulation": "GST Act 2017 Sec 16 and 17"
+      },
+      {
+        "issue": "The transaction with Client A on 2026-01-15 for \u20b920.00 Cr ( $240,000.00) seems to be a large revenue receipt; verification of related-party status under Companies Act 2013 and SEBI LODR 2015 is required.",
+        "severity": "High",
+        "regulation": "Companies Act 2013 Sec 188, SEBI LODR 2015"
+      },
+      {
+        "issue": "TDS compliance verification is required for expenses under Income Tax Act 1961 Sec 194C, 194J, and 194I.",
+        "severity": "Medium",
+        "regulation": "Income Tax Act 1961 Sec 194C, 194J, 194I"
+      }
+    ],
+    "risk_distribution": [
+      {
+        "name": "Critical",
+        "value": 20
+      },
+      {
+        "name": "High",
+        "value": 40
+      },
+      {
+        "name": "Medium",
+        "value": 30
+      },
+      {
+        "name": "Low",
+        "value": 10
+      }
+    ]
+  },
+  "forecast_analysis": {
+    "kpis": {
+      "revenue": "$2.88M",
+      "revenue_inr": "\u20b924.04 Cr",
+      "cashflow": "$0.58M",
+      "cashflow_inr": "\u20b94.85 Cr",
+      "accuracy": "80.0%",
+      "confidence": "70%",
+      "growth_rate": "+10.0%"
+    },
+    "methodology": {
+      "approach": "We used the historical data to project future revenue and expenses, assuming a steady growth rate.",
+      "base_period": "January 2026",
+      "technique": "Trend extrapolation",
+      "data_used": "Total Revenue: $240,000, Total Expenses: $181,999",
+      "assumptions": [
+        "The company will continue to grow at a steady rate of 10% per month",
+        "The average transaction amount will remain around $98,399.80",
+        "The company will maintain its current payment methods and vendor relationships"
+      ],
+      "confidence_note": "We are moderately confident in our projections, as they are based on limited historical data.",
+      "layman_note": "We looked at the company's past transactions and used that information to predict future income and expenses. We assumed the company will keep growing at a steady pace."
+    },
+    "chartData": [
+      {
+        "month": "Jul '26",
+        "forecast": 288000,
+        "actual": null
+      },
+      {
+        "month": "Aug '26",
+        "forecast": 316800,
+        "actual": null
+      },
+      {
+        "month": "Sep '26",
+        "forecast": 348480,
+        "actual": null
+      },
+      {
+        "month": "Oct '26",
+        "forecast": 383328,
+        "actual": null
+      },
+      {
+        "month": "Nov '26",
+        "forecast": 421661,
+        "actual": null
+      },
+      {
+        "month": "Dec '26",
+        "forecast": 463827,
+        "actual": null
+      }
+    ],
+    "trends": [
+      {
+        "metric": "Revenue Growth (vs prior period)",
+        "value": "+10%",
+        "direction": "up",
+        "detail": "Based on document figures"
+      },
+      {
+        "metric": "Operational Costs",
+        "value": "+5%",
+        "direction": "up",
+        "detail": "Cost trend from document"
+      },
+      {
+        "metric": "Profit Margin",
+        "value": "20%",
+        "direction": "up",
+        "detail": "Derived from document"
+      },
+      {
+        "metric": "Cash Flow Health",
+        "value": "$0.58M",
+        "direction": "up",
+        "detail": "Working capital position"
+      },
+      {
+        "metric": "Vendor Risk Exposure",
+        "value": "+20%",
+        "direction": "up",
+        "detail": "Payables concentration"
+      },
+      {
+        "metric": "DSO (Days Sales Outstanding)",
+        "value": "30d",
+        "direction": "down",
+        "detail": "Receivables collection speed"
+      }
+    ],
+    "cashflow": [
+      {
+        "month": "Jul '26",
+        "cashflow": 58000,
+        "operating": 40000,
+        "investing": 10000,
+        "financing": 8000
+      },
+      {
+        "month": "Aug '26",
+        "cashflow": 63800,
+        "operating": 44000,
+        "investing": 11000,
+        "financing": 8800
+      },
+      {
+        "month": "Sep '26",
+        "cashflow": 70180,
+        "operating": 48400,
+        "investing": 12100,
+        "financing": 9680
+      },
+      {
+        "month": "Oct '26",
+        "cashflow": 77198,
+        "operating": 53240,
+        "investing": 13310,
+        "financing": 10648
+      },
+      {
+        "month": "Nov '26",
+        "cashflow": 84918,
+        "operating": 58564,
+        "investing": 14641,
+        "financing": 11713
+      },
+      {
+        "month": "Dec '26",
+        "cashflow": 93380,
+        "operating": 64420,
+        "investing": 16105,
+        "financing": 12875
+      }
+    ],
+    "recommendations": [
+      {
+        "title": "Reduce Vendor Risk Exposure",
+        "detail": "The company should consider diversifying its vendors to reduce payables concentration, which is currently at 20%.",
+        "priority": "High",
+        "impact": "$0.10M"
+      },
+      {
+        "title": "Improve Receivables Collection",
+        "detail": "The company should focus on improving its receivables collection speed, currently at 30 days, to improve cash flow.",
+        "priority": "Medium",
+        "impact": "$0.05M"
+      },
+      {
+        "title": "Monitor Operational Costs",
+        "detail": "The company should closely monitor its operational costs, which are expected to increase by 5% per month.",
+        "priority": "Medium",
+        "impact": "$0.05M"
+      },
+      {
+        "title": "Explore New Revenue Streams",
+        "detail": "The company should consider exploring new revenue streams to maintain its growth rate of 10% per month.",
+        "priority": "Critical",
+        "impact": "$0.20M"
+      },
+      {
+        "title": "Maintain Cash Flow Health",
+        "detail": "The company should prioritize maintaining its cash flow health, currently at $0.58M, to ensure it can meet its financial obligations.",
+        "priority": "Critical",
+        "impact": "$0.20M"
+      }
+    ]
+  }
+}

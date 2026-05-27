@@ -1,0 +1,27 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# LLM / AI
+langchain
+# langchain-groq       # ← Groq (commented — rate limit reached; re-enable when needed)
+langchain-openai       # ← OpenRouter + any OpenAI-compatible provider
+langchain-community
+langgraph
+# groq                 # ← Groq SDK (commented — not needed while using OpenRouter)
+
+# Data / ML
+pandas
+numpy
+
+# Vector store
+chromadb
+sentence-transformers
+
+# Document / OCR
+Pillow
+pytesseract
+pypdf
+
+# Tokenisation
+tiktoken

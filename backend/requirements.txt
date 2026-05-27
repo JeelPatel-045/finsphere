@@ -1,0 +1,39 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+
+# LLM / AI
+langchain
+# langchain-groq       # ← Groq (commented — rate limit reached; re-enable when needed)
+langchain-openai       # ← OpenRouter + any OpenAI-compatible provider
+langchain-community
+langgraph
+# groq                 # ← Groq SDK (commented — not needed while using OpenRouter)
+
+# Data / ML
+pydantic
+pandas
+numpy
+scikit-learn
+prophet
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Auth
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==4.0.1        # passlib 1.7 is incompatible with bcrypt 4.1+
+
+# Vector store
+chromadb
+sentence-transformers
+
+# File handling
+python-multipart
+pypdf
+pymupdf          # PDF → image OCR fallback for scanned PDFs
+tiktoken
+Pillow
+pytesseract

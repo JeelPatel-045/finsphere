@@ -1,0 +1,11 @@
+{
+  "/page": "app/page.js",
+  "/forecasting/page": "app/forecasting/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/agents/page": "app/agents/page.js",
+  "/chat/page": "app/chat/page.js",
+  "/sql-agent/page": "app/sql-agent/page.js",
+  "/documents/page": "app/documents/page.js",
+  "/audit/page": "app/audit/page.js",
+  "/settings/page": "app/settings/page.js"
+}
