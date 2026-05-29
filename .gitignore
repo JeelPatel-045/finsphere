@@ -1,3 +1,22 @@
 .env
 *.env
 *.rar
+
+
+# Python
+__pycache__/
+*.pyc
+venv/
+*.db
+uploads/
+chroma_db/
+vectorstore/
+
+# Node
+node_modules/
+.next/
+.env.local
+.env.production
+
+# Misc
+*.log
